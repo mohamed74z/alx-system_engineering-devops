@@ -1,1 +1,2 @@
-My first readme
+pwd
+ls -la
