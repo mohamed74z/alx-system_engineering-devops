@@ -1,3 +1,1 @@
-#!/bin/bash
-pwd
-ls -la
+My first readme
