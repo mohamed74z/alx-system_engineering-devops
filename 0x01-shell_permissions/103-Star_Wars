@@ -1,0 +1,5 @@
+#!/bin/bash
+curl -sL http://www.asciimation.co.nz/t/index.txt | sed 's/ /\n/g' | while read line; do
+    echo "$line"
+    sleep 0.05
+done
