@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -exec chmod a+x {} + -o -type f -executable -print0 | xargs -0r echo
+chmod -R a+X *
