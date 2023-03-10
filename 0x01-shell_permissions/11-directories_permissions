@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -exec chmod a+x {} \;
+find . -type d -exec chmod a+x {} \n -o -type f -exec chmod a-x {} \n -o -print0 \n | xargs -0r echo
