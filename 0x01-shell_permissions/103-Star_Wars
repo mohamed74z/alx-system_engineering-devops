@@ -1,5 +1,2 @@
 #!/bin/bash
-curl -sL http://www.asciimation.co.nz/t/index.txt | sed 's/ /\n/g' | while read line; do
-    echo "$line"
-    sleep 0.05
-done
+IFS=$'\n' read -d '' -ra starwars_lines <"$103-Star_Wars"; rows=$(tput lines); cols=$(tput cols); offset=$(( (rows - ${#starwars_lines[@]}) / 2 )); for (( i=0; i<${#starwars_lines[@]}; i++ )); do printf "\033[%d;%dH%s\n" $((i+offset)) $(( (cols-${#starwars_lines[$i]})/2 )) "${starwars_lines[$i]}"; sleep 0.05; done
