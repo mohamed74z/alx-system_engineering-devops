@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((2#${WATER} + ${STIR})) | awk '{printf "%d\n", $0%bestchol}'
+printf "%d\n" "$((2#${WATER} + ${STIR})#bestchol)"
